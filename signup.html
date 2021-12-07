@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/main.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account</title>
+  </head>
+  <body class="signup__body">
+    <img src="/img/loader.gif" class="loader" alt="loading-page" />
+
+    <div class="alert-box">
+      <img src="/img/error.png" class="alert__img" alt="error" />
+      <p class="alert__msg">Error message</p>
+    </div>
+
+    <div class="loader__logoContainer">
+      <img src="/img/logo.png" class="loader__logo" alt="logo" />
+      <div class="registration__container">
+        <input type="text" autocomplete="off" id="name" placeholder="name" />
+        <input type="email" autocomplete="off" id="email" placeholder="email" />
+        <input
+          type="password"
+          autocomplete="off"
+          id="password"
+          placeholder="password"
+        />
+        <input
+          type="text"
+          autocomplete="off"
+          id="number"
+          placeholder="number"
+        />
+        <input type="checkbox" checked id="terms-and-cond" class="checkbox" />
+        <label for="terms-and-cond"
+          >Agree to our <a href="#">terms and conditions</a></label
+        >
+        <br />
+        <input type="checkbox" id="notification" class="checkbox" />
+        <label for="notification"
+          >Receive upcoming offers and events by mail
+        </label>
+        <button class="register__btn">Create Account</button>
+      </div>
+      <a href="/login" class="link">Already have an account? Log in here</a>
+    </div>
+
+    <script src="/js/form.js"></script>
+  </body>
+</html>
