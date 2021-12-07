@@ -31,6 +31,7 @@ submitBtn.addEventListener("click", () => {
     name: fullName.value,
     email: email.value,
     password: password.value,
+    number: number.value,
     tac: tac.checked,
     notification: notification.checked,
     seller: false,
