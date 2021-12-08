@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/main.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interlux : Log In</title>
+  </head>
+  <body class="signup__body">
+    <img src="/img/loader.gif" class="loader" alt="loading-page" />
+
+    <div class="alert-box">
+      <img src="/img/error.png" class="alert__img" alt="error" />
+      <p class="alert__msg">Error message</p>
+    </div>
+
+    <div class="loader__logoContainer">
+      <img src="/img/logo.png" class="loader__logo" alt="logo" />
+      <div class="registration__container">
+        <input type="email" autocomplete="off" id="email" placeholder="email" />
+        <input
+          type="password"
+          autocomplete="off"
+          id="password"
+          placeholder="password"
+        />
+        <button class="register__btn">Log in</button>
+      </div>
+      <a href="/signup" class="link">don't have an account? Create one</a>
+    </div>
+
+    <script src="/js/form.js"></script>
+    <script src="/js/token.js"></script>
+  </body>
+</html>

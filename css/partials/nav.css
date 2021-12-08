@@ -1,0 +1,122 @@
+@import "/css/style.css";
+
+/* Primary header */
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.logo {
+  margin: 2rem 3rem;
+}
+
+.logo__container {
+  position: fixed;
+  top: 1rem;
+}
+
+#navbar {
+  position: fixed;
+  right: 0rem;
+  top: 1rem;
+}
+
+.search {
+  display: flex;
+  width: 20rem;
+}
+
+#search__box {
+  width: 80%;
+  height: 2rem;
+  padding: 1rem;
+  margin: 0;
+  border-radius: 0;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border: 1px solid var(--mainColor);
+  text-transform: capitalize;
+  background: none;
+  color: var(--greyColor);
+  outline: none;
+}
+
+.search__btn {
+  width: 40%;
+  height: 2.1rem;
+  /* padding: 1rem 2rem; */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: var(--mainColor);
+  color: white;
+  text-transform: capitalize;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.login__icon,
+.cart__icon {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.primary-header {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sr-only {
+  display: none;
+}
+
+.mobile__nav--toggle {
+  display: none;
+}
+
+.primary-navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: hsl(0 0% 100% / 0.5);
+}
+
+.login__logout--popup {
+  position: absolute;
+  right: 4rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 1rem;
+  width: 10rem;
+  transition: 0.5s;
+  border: 0.2rem solid var(--mainColor);
+}
+
+.login__logout--popup::after {
+  content: "";
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #fff;
+  border-radius: 0.5rem;
+}
+
+#user__btn {
+  padding: 1rem;
+  background: var(--mainColor);
+  color: #fff;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.hide__login {
+  opacity: 0;
+  pointer-events: none;
+}

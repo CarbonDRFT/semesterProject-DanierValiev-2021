@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/main.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interlux Dashboard</title>
+  </head>
+  <body>
+    <img src="/img/loader.gif" class="loader" alt="loading-page" />
+
+    <div class="alert-box">
+      <img src="/img/error.png" class="alert__img" alt="error" />
+      <p class="alert__msg">Error message</p>
+    </div>
+
+    <img src="/img/logo.png" alt="logo" class="logo" />
+
+    <!-- become seller element -->
+    <div class="become__seller hide__seller">
+      <h1 class="seller__heading">Become a seller</h1>
+      <p class="seller__description">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime dicta
+        autem incidunt ipsam hic quasi voluptas, neque dolorem quod molestiae?
+        Aperiam odit praesentium obcaecati doloremque consequuntur fuga totam,
+        corporis repellendus, alias excepturi dignissimos quod in corrupti
+        suscipit accusantium!
+      </p>
+      <button class="seller__btn" id="seller__idBtn">
+        Apply for seller account
+      </button>
+    </div>
+
+    <!-- apply form -->
+    <div class="seller__apply--form">
+      <input
+        type="text"
+        id="business__user"
+        placeholder="Business name / Company name / Shop name"
+      />
+      <textarea id="business__add" placeholder="address"></textarea>
+      <textarea id="business__about" placeholder="about"></textarea>
+      <input type="text" id="business__number" placeholder="number" />
+      <input type="checkbox" checked id="terms-and-cond" class="checkbox" />
+      <label for="terms-and-cond"
+        >Agree to our <a href="#">terms and conditions</a></label
+      >
+      <br />
+      <input type="checkbox" checked id="legitInfo" class="checkbox" />
+      <label for="legitInfo">All information is legit </label>
+      <button class="seller__submit--btn">Apply</button>
+    </div>
+
+    <script src="/js/token.js"></script>
+    <script src="/js/seller.js"></script>
+  </body>
+</html>

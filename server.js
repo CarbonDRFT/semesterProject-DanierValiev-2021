@@ -6,6 +6,8 @@ const path = require("path");
 
 //firebase admin setup
 let serviceAccount = require("./semester-project-5a573-firebase-adminsdk-xmrfj-716a7a9d0b.json");
+const { RSA_NO_PADDING } = require("constants");
+const { stat } = require("fs");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -81,8 +83,48 @@ app.post("/signup", (req, res) => {
         });
       }
     });
+});
 
-  res.json("data recieved");
+//login route
+
+app.get("/login", (req, res) => {
+  res.sendFile(path.join(staticPath, "login.html"));
+});
+
+app.post("/login", (req, res) => {
+  let { email, password } = req.body;
+
+  if (!email.length || !password.length) {
+    return res.json({ alert: "fill all the inputs" });
+  }
+
+  db.collection("users")
+    .doc(email)
+    .get()
+    .then((user) => {
+      if (!user.exists) {
+        // if email does not exists
+        return res.json({ alert: "log in email does not exists" });
+      } else {
+        bcrypt.compare(password, user.data().password, (err, result) => {
+          if (result) {
+            let data = user.data();
+            return res.json({
+              fullName: data.name,
+              email: data.email,
+              seller: data.seller,
+            });
+          } else {
+            return res.json({ alert: "password is incorrect" });
+          }
+        });
+      }
+    });
+});
+
+//Seller route
+app.get("/seller", (req, res) => {
+  res.sendFile(path.join(staticPath, "seller.html"));
 });
 
 //404 route

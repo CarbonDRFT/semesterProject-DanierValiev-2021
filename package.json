@@ -20,6 +20,8 @@
     "bcrypt": "^5.0.1",
     "express.js": "^1.0.0",
     "firebase-admin": "^10.0.0",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.1",
+    "pg-connection-string": "^2.5.0"
   }
 }
