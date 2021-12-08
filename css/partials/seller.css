@@ -32,3 +32,34 @@
   font-size: 1.6rem;
   cursor: pointer;
 }
+
+/* apply form */
+.seller__apply--form {
+  font-weight: 500;
+  margin: auto;
+  margin-left: 3rem;
+}
+
+.seller__apply--form:not(input[type="checked"]) {
+  width: 100%;
+}
+
+.seller__apply--form textarea {
+  width: 70%;
+  height: 9rem;
+  padding: 1rem 2rem;
+}
+
+.seller__submit--btn {
+  background: var(--mainColor);
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  margin: 1rem 0;
+  width: auto;
+  padding: 1rem 4rem;
+  font-size: 1.6rem;
+}

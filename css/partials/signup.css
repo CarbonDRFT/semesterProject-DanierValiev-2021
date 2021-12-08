@@ -26,7 +26,8 @@
 
 input[type="text"],
 input[type="password"],
-input[type="email"] {
+input[type="email"],
+textarea {
   display: block;
   width: 30rem;
   height: 4rem;
