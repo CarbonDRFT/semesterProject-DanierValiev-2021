@@ -17,7 +17,6 @@ const compareToken = (token, key) => {
     let index2 = char.indexOf(token[i + 1]);
     string += char[index1 + index2];
   }
-
   if (string === key) {
     return true;
   }
@@ -40,6 +39,7 @@ const sendData = (path, data) => {
 };
 
 const processData = (data) => {
+  console.log(data);
   loader.style.display = null;
   if (data.alert) {
     showAlert(data.alert);

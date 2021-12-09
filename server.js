@@ -127,6 +127,44 @@ app.get("/seller", (req, res) => {
   res.sendFile(path.join(staticPath, "seller.html"));
 });
 
+app.post("/seller", (req, res) => {
+  let {
+    fullName,
+    businessAbout,
+    businessAddress,
+    businessNumber,
+    tac,
+    legit,
+    email,
+  } = req.body;
+  if (
+    !fullName.length ||
+    !businessAddress.length ||
+    !businessAbout.length ||
+    !businessNumber.length < 10 ||
+    !Number(businessNumber)
+  ) {
+    return res.json({ alert: "some information(s) is/are invalid" });
+  } else if (!tac || !legit) {
+    return res.json({ alert: "you must agree to our terms and conditions" });
+  } else {
+    //update users seller status here.
+    db.collection("seller")
+      .db(email)
+      .set(req.body)
+      .then((data) => {
+        db.collection("users")
+          .doc(email)
+          .update({
+            seller: true,
+          })
+          .then((data) => {
+            res.json(true);
+          });
+      });
+  }
+});
+
 //404 route
 app.get("/404", (req, res) => {
   res.sendFile(path.join(staticPath, "./404.html"));

@@ -36,12 +36,14 @@
 /* apply form */
 .seller__apply--form {
   font-weight: 500;
-  margin: auto;
+  margin: 2rem auto;
   margin-left: 3rem;
+  width: 70%;
 }
 
 .seller__apply--form:not(input[type="checked"]) {
-  width: 100%;
+  width: 70%;
+  margin: 2rem auto;
 }
 
 .seller__apply--form textarea {
