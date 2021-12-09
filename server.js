@@ -141,16 +141,17 @@ app.post("/seller", (req, res) => {
     !fullName.length ||
     !businessAddress.length ||
     !businessAbout.length ||
-    !businessNumber.length < 10 ||
+    businessNumber.length != 10 ||
     !Number(businessNumber)
   ) {
+    console.log(req.body);
     return res.json({ alert: "some information(s) is/are invalid" });
   } else if (!tac || !legit) {
     return res.json({ alert: "you must agree to our terms and conditions" });
   } else {
     //update users seller status here.
     db.collection("seller")
-      .db(email)
+      .doc(email)
       .set(req.body)
       .then((data) => {
         db.collection("users")

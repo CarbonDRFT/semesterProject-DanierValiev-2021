@@ -40,7 +40,7 @@ applyFormButton.addEventListener("click", () => {
     !businessNumber.value.length
   ) {
     showAlert("Fill all the inputs");
-  } else if (!tac.checked || !legitInfo.checked) {
+  } else if (!businessTac.checked || !legitInfo.checked) {
     showAlert("you must agree to our terms and conditions");
   } else {
     //making server request
@@ -50,7 +50,7 @@ applyFormButton.addEventListener("click", () => {
       businessAddress: businessAddress.value,
       businessAbout: businessAbout.value,
       businessNumber: businessNumber.value,
-      tac: tac.checked,
+      tac: businessTac.checked,
       legit: legitInfo.checked,
       email: JSON.parse(sessionStorage.user).email,
     });
