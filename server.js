@@ -231,13 +231,13 @@ app.post("/add-product", (req, res) => {
 
   //validation
 
-  if (!name.value.length) {
+  if (!name.length) {
     return res.json({ alert: "enter product name" });
-  } else if (shortDes.value.length > 100 || shortDes.value.length < 10) {
+  } else if (shortDes.length > 100 || shortDes.length < 10) {
     return res.json({
       alert: "short description must be between 10 to 100 letters long",
     });
-  } else if (!des.value.length) {
+  } else if (!des.length) {
     return res.json({ alert: "enter detail description about the product" });
   } else if (!images.length) {
     // image link array
@@ -245,19 +245,15 @@ app.post("/add-product", (req, res) => {
   } else if (!sizes.length) {
     // size array
     return res.json({ alert: "select at least one size" });
-  } else if (
-    !actualPrice.value.length ||
-    !discount.value.length ||
-    !sellPrice.value.length
-  ) {
+  } else if (!actualPrice.length || !discount.length || !sellPrice.length) {
     return res.json({ alert: "you must add pricings" });
   } else if (stock.value < 20) {
     return res.json({ alert: "you should have at least 20 items in stock" });
-  } else if (!tags.value.length) {
+  } else if (!tags.length) {
     return res.json({
       alert: "enter few tags to help ranking your product in search",
     });
-  } else if (!tac.checked) {
+  } else if (!tac) {
     return res.json({ alert: "you must agree to our terms and conditions" });
   }
 
