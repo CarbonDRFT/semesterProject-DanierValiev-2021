@@ -1,6 +1,7 @@
 let loader = document.querySelector(".loader");
 
 const becomeSellerElement = document.querySelector(".become__seller");
+const productListingElement = document.querySelector(".product__listing");
 const applyForm = document.querySelector(".seller__apply--form");
 const showApplyForBtn = document.querySelector("#seller__idBtn");
 
@@ -8,10 +9,14 @@ window.onload = () => {
   if (sessionStorage.user) {
     let user = JSON.parse(sessionStorage.user);
     if (compareToken(user.authToken, user.email)) {
-      becomeSellerElement.classList.remove("hide__seller");
-    } //else {
-    //location.replace("/login");
-    //}
+      if (!user.seller) {
+        becomeSellerElement.classList.remove("hide__seller");
+      } else {
+        productListingElement.classList.remove("hide__seller");
+      }
+    } else {
+      location.replace("/login");
+    }
   } else {
     location.replace("/login");
   }

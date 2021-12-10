@@ -65,3 +65,32 @@
   padding: 1rem 4rem;
   font-size: 1.6rem;
 }
+
+/* Product listing */
+
+.add__product {
+  width: 70%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+.add__product--title {
+  font-size: 2rem;
+  color: var(--mainColor);
+}
+
+.add__product--btn {
+  border: none;
+  outline: none;
+  background: var(--mainColor);
+  color: #fff;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  cursor: pointer;
+}

@@ -43,21 +43,30 @@ const processData = (data) => {
   loader.style.display = null;
   if (data.alert) {
     showAlert(data.alert);
-  } else if (data) {
+  } else if (data.name) {
     //create authToken
     data.authToken = generateToken(data.email);
     sessionStorage.user = JSON.stringify(data);
     location.replace("/");
+  } else if (data == true) {
+    // seller page
+    let user = JSON.parse(sessionStorage.user);
+    user.seller = true;
+    sessionStorage.user = JSON.stringify(user);
+    location.reload();
+  } else if (data.product) {
+    location.href = "/seller";
   }
 };
 
 // Alert function
 const showAlert = (msg) => {
-  let alertBox = document.querySelector(".alert-box");
+  let alertBox = document.querySelector(".alert__box");
   let alertMsg = document.querySelector(".alert__msg");
   alertMsg.innerHTML = msg;
   alertBox.classList.add("show");
   setTimeout(() => {
     alertBox.classList.remove("show");
   }, 3000);
+  return false;
 };

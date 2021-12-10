@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/main.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interlux : Add Product</title>
+  </head>
+  <body class="product__body">
+    <img src="../img/loader.gif" class="loader" alt="" />
+
+    <div class="alert__box">
+      <img src="../img/error.png" class="alert__img" alt="" />
+      <p class="alert__msg"></p>
+    </div>
+    <div class="product__logo--container">
+      <img src="/img/logo.png" class="product__logo" alt="" />
+    </div>
+
+    <div class="product__form">
+      <div class="product__info--container">
+        <input type="text" id="product__name" placeholder="product name" />
+        <input
+          type="text"
+          id="short__des"
+          placeholder="short line about the product"
+        />
+        <textarea
+          id="product__description"
+          placeholder="detail description"
+        ></textarea>
+      </div>
+
+      <!-- product image -->
+      <div class="product__info">
+        <div class="product__image"><p class="text">product image</p></div>
+        <div class="upload__image--sec">
+          <!-- upload inputs -->
+          <p class="text"><img src="../img/camera.png" alt="" />upload image</p>
+          <div class="upload__catalouge">
+            <input
+              type="file"
+              class="fileupload"
+              id="first-file-upload-btn"
+              hidden
+            />
+            <label for="first-file-upload-btn" class="upload__image"
+              ><p class="upload__img--p">upload</p></label
+            >
+            <input
+              type="file"
+              class="fileupload"
+              id="second-file-upload-btn"
+              hidden
+            />
+            <label for="second-file-upload-btn" class="upload__image">
+              <p class="upload__img--p">upload</p>
+            </label>
+            <input
+              type="file"
+              class="fileupload"
+              id="third-file-upload-btn"
+              hidden
+            />
+            <label for="third-file-upload-btn" class="upload__image">
+              <p class="upload__img--p">upload</p>
+            </label>
+            <input
+              type="file"
+              class="fileupload"
+              id="fourth-file-upload-btn"
+              hidden
+            />
+            <label for="fourth-file-upload-btn" class="upload__image">
+              <p class="upload__img--p">upload</p>
+            </label>
+          </div>
+        </div>
+        <div class="select__sizes">
+          <p class="text">size available</p>
+          <div class="sizes">
+            <input type="checkbox" class="size__checkbox" id="xs" value="xs" />
+            <input type="checkbox" class="size__checkbox" id="s" value="s" />
+            <input type="checkbox" class="size__checkbox" id="m" value="m" />
+            <input type="checkbox" class="size__checkbox" id="l" value="l" />
+            <input type="checkbox" class="size__checkbox" id="xl" value="xl" />
+            <input
+              type="checkbox"
+              class="size__checkbox"
+              id="xxl"
+              value="xxl"
+            />
+            <input
+              type="checkbox"
+              class="size__checkbox"
+              id="xxxl"
+              value="xxxl"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="product__price">
+        <input
+          type="number"
+          class="product__features"
+          id="actual__price"
+          placeholder="actual price"
+        />
+        <input
+          type="number"
+          class="product__features"
+          id="discount"
+          placeholder="discount percentage"
+        />
+        <input
+          type="number"
+          class="product__features"
+          id="sell__price"
+          placeholder="selling price"
+        />
+      </div>
+
+      <input
+        type="number"
+        class="product__stock"
+        id="stock"
+        min="20"
+        placeholder="item in stocks (minimum 20)"
+      />
+
+      <textarea
+        id="tags"
+        placeholder="Enter categories here, for example - Men, Jeans, Blue Jeans, Rough jeans (you sholud add men or women at start)"
+      ></textarea>
+
+      <input type="checkbox" class="checkbox" id="tac" checked />
+      <label for="tac">clothing take 30% from your total sell</label>
+
+      <div class="buttons">
+        <button class="btn" id="add-btn">add product</button>
+        <button class="btn" id="save-btn">save draft</button>
+      </div>
+    </div>
+
+    <script src="/js/addProduct.js"></script>
+    <script src="/js/token.js"></script>
+  </body>
+</html>

@@ -15,6 +15,43 @@ admin.initializeApp({
 
 let db = admin.firestore();
 
+const aws = require("aws-sdk");
+const dotenv = require("dotenv");
+
+dotenv.config();
+
+// aws parameters
+const region = "eu-north-1";
+const bucketName = "products-semester-project";
+const accessKeyId = process.env.AWS_ACCESS_KEY;
+const secretAccessKey = process.env.AWS_SECRET_KEY;
+
+aws.config.update({
+  region,
+  accessKeyId,
+  secretAccessKey,
+});
+
+// init s3
+const s3 = new aws.S3();
+
+// generate image upload link
+async function generateURL() {
+  let date = new Date();
+  let id = parseInt(Math.random() * 1000000000);
+
+  const imageName = `${id}${date.getTime()}.jpg`;
+
+  const params = {
+    Bucket: bucketName,
+    Key: imageName,
+    Expires: 300, //300 ms
+    ContentType: "image/jpeg",
+  };
+  const uploadUrl = await s3.getSignedUrlPromise("putObject", params);
+  return uploadUrl;
+}
+
 // declare static path
 let staticPath = path.join(__dirname);
 
@@ -141,7 +178,7 @@ app.post("/seller", (req, res) => {
     !fullName.length ||
     !businessAddress.length ||
     !businessAbout.length ||
-    businessNumber.length != 10 ||
+    businessNumber.length < 8 ||
     !Number(businessNumber)
   ) {
     console.log(req.body);
@@ -164,6 +201,77 @@ app.post("/seller", (req, res) => {
           });
       });
   }
+});
+
+app.get("/add-product", (req, res) => {
+  res.sendFile(path.join(staticPath, "addProduct.html"));
+});
+
+// get the upload link
+app.get("/s3url", (req, res) => {
+  generateURL().then((url) => res.json(url));
+});
+
+// add product
+app.post("/add-product", (req, res) => {
+  let {
+    name,
+    shortDes,
+    des,
+    images,
+    sizes,
+    actualPrice,
+    discount,
+    sellPrice,
+    stock,
+    tags,
+    tac,
+    email,
+  } = req.body;
+
+  //validation
+
+  if (!name.value.length) {
+    return res.json({ alert: "enter product name" });
+  } else if (shortDes.value.length > 100 || shortDes.value.length < 10) {
+    return res.json({
+      alert: "short description must be between 10 to 100 letters long",
+    });
+  } else if (!des.value.length) {
+    return res.json({ alert: "enter detail description about the product" });
+  } else if (!images.length) {
+    // image link array
+    return res.json({ alert: "upload atleast one product image" });
+  } else if (!sizes.length) {
+    // size array
+    return res.json({ alert: "select at least one size" });
+  } else if (
+    !actualPrice.value.length ||
+    !discount.value.length ||
+    !sellPrice.value.length
+  ) {
+    return res.json({ alert: "you must add pricings" });
+  } else if (stock.value < 20) {
+    return res.json({ alert: "you should have at least 20 items in stock" });
+  } else if (!tags.value.length) {
+    return res.json({
+      alert: "enter few tags to help ranking your product in search",
+    });
+  } else if (!tac.checked) {
+    return res.json({ alert: "you must agree to our terms and conditions" });
+  }
+
+  // add product
+  let docName = `${name.toLowerCase()}-${Math.floor(Math.random() * 5000)}`;
+  db.collection("products")
+    .doc(docName)
+    .set(req.body)
+    .then((data) => {
+      res.json({ product: name });
+    })
+    .catch((err) => {
+      return res.json({ alert: "some error occured. Try again" });
+    });
 });
 
 //404 route

@@ -3,6 +3,10 @@
   --secondColor: #63585e;
   --greyColor: #c4cad0;
   --mainFont: "roboto", sans-serif;
+  --desktopH1: 50px;
+  --desktopH2: 37px;
+  --desktoph3: 28px;
+  --desktop-p: 16px;
 }
 
 * {
@@ -16,6 +20,7 @@
 body {
   background-color: thistle;
   height: 2000px;
+  width: 100%;
 }
 
 /* @supports (backdrop-filer:blur(1rem)) {
@@ -27,6 +32,8 @@ body {
 
 .primary-navigation a {
   text-decoration: none;
+  font-size: var(--desktop-p);
+  color: var(--secondColor);
 }
 
 .primary-navigation a > [area-hidden="true"] {
