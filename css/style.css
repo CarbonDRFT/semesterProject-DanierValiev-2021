@@ -30,6 +30,22 @@ body {
     }
 } */
 
+span {
+  font-size: var(--desktop-p);
+}
+
+p {
+  font-size: var(--desktop-p);
+}
+
+h2 {
+  font-size: var(--desktopH2);
+}
+
+h3 {
+  font-size: var(--desktoph3);
+}
+
 .primary-navigation a {
   text-decoration: none;
   font-size: var(--desktop-p);

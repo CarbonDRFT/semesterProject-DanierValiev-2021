@@ -94,3 +94,140 @@
   font-size: 1.6rem;
   cursor: pointer;
 }
+
+.product__card {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 450px;
+  margin-right: 40px;
+}
+
+.product__container {
+  padding: 0;
+  margin: 3rem;
+  position: absolute;
+}
+
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 2px 10px;
+  border-radius: 2px;
+  background: var(--secondColor);
+  color: #fff;
+}
+
+.product__card:hover .card__action--btn {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.card__action--btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+  background: #fff;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card__action--btn img {
+  height: 18px;
+}
+
+.open__btn {
+  top: 60px;
+}
+
+.delete__popup--btn {
+  top: 110px;
+  background: #f25252;
+}
+
+.product__thumb {
+  width: 30rem;
+  height: 40rem;
+  object-fit: cover;
+}
+
+.delete__alert {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.alert {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 15px;
+}
+
+.close__btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close__btn img {
+  width: 15px;
+}
+
+.delete__svg {
+  height: 60px;
+  display: block;
+  margin: 20px auto;
+}
+
+.text {
+  color: #383838;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.delete__btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #f25252;
+  margin: 15px auto 0;
+  display: block;
+  padding: 10px 20px;
+  text-transform: capitalize;
+  color: #fff;
+  font-size: var(--desktop-p);
+}
+
+.actual__price {
+  margin-left: 20px;
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.product__info--sellerPage {
+  display: block !important;
+  height: auto !important;
+  grid: none !important;
+}
