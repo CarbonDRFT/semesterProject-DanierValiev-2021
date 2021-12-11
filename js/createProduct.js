@@ -1,11 +1,4 @@
-let openEditor;
-
 const createProduct = (data) => {
-  openEditor = () => {
-    sessionStorage.tempProduct = JSON.stringify(data);
-    location.href = `/add-product/${data.id}`;
-  };
-
   let productContainer = document.querySelector(".product__container");
   productContainer.innerHTML += `
     <div class="product__card">
@@ -14,9 +7,10 @@ const createProduct = (data) => {
             <img src="${
               data.images[0] || "img/no image.png"
             } " class="product__thumb" alt="">
-            <button class="card__action--btn edit__btn" onclick="openEditor()"><img src="img/edit.png" alt=""></button>
+            <button class="card__action--btn edit__btn" onclick="location.href = 
+            '/add-product/${data.id}'"><img src="img/edit.png" alt=""></button>
             <button class="card__action--btn open__btn" onclick="location.href = 
-            '/${data.id}'"><img src="img/open.png" alt=""></button>
+            '/products/${data.id}'"><img src="img/open.png" alt=""></button>
             <button class="card__action--btn delete__popup--btn" onclick="openDeletePopup('${
               data.id
             }')"><img src="img/delete.png" alt=""></button>
