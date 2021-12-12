@@ -179,7 +179,7 @@ saveDraft.addEventListener("click", () => {
 const setFormsData = (data) => {
   productName.value = data.name;
   shortLine.value = data.shortDes;
-  productDes.value = data.productDes;
+  productDes.value = data.des;
   actualPrice.value = data.actualPrice;
   discountPercentage.value = data.discount;
   sellingPrice.value = data.sellPrice;

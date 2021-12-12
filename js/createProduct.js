@@ -16,7 +16,7 @@ const createProduct = (data) => {
             }')"><img src="img/delete.png" alt=""></button>
         </div>
         <div class="product__info product__info--sellerPage">
-            <h2 class="product__brand">${data.name}</h2>
+            <h3 class="product__brand">${data.name}</h3>
             <p class="product__short--des">${data.shortDes}</p>
             <span class="price">$${data.sellPrice}</span> 
             <span class="actual__price">$${data.actualPrice}</span>
