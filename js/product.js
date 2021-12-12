@@ -44,7 +44,7 @@ const setData = (data) => {
   });
   productImages[0].click();
 
-  // setup size buttons
+  // size buttons
   sizeBtns.forEach((item) => {
     if (!data.sizes.includes(item.innerHTML)) {
       item.style.display = "none";
@@ -98,10 +98,10 @@ const fetchProductData = () => {
           "similar products"
         )
       );
-    })
-    .catch((err) => {
-      location.replace("/404");
     });
+  // .catch((err) => {
+  //   location.replace("/404");
+  // });
 };
 
 let productId = null;

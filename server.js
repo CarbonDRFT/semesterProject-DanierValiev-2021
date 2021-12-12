@@ -284,10 +284,15 @@ app.post("/add-product", (req, res) => {
 
 // get products
 app.post("/get-products", (req, res) => {
-  let { email, id } = req.body;
-  let docRef = id
-    ? db.collection("products").doc(id)
-    : db.collection("products").where("email", "==", email);
+  let { email, id, tag } = req.body;
+
+  if (id) {
+    docRef = db.collection("products").doc(id);
+  } else if (tag) {
+    docRef = db.collection("products").where("tags", "array-contains", tag);
+  } else {
+    docRef = db.collection("products").where("email", "==", email);
+  }
 
   docRef.get().then((products) => {
     if (products.empty) {

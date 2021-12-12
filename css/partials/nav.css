@@ -63,7 +63,7 @@
   cursor: pointer;
 }
 
-.primary-header {
+.primary__header {
   align-items: center;
   justify-content: space-between;
 }

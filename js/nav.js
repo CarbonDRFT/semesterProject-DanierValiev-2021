@@ -1,8 +1,8 @@
 const createNav = () => {
-  let nav = document.querySelector(".primary-header", ".flex");
+  let nav = document.querySelector(".primary__header", ".flex");
   nav.innerHTML = `
     <div class="logo__container">
-        <img src="./img/logo.png" alt="logo" />
+        <img src="../img/logo.png" alt="logo" />
       </div>
 
       <button
@@ -50,7 +50,7 @@ const createNav = () => {
         </div>
 
         </a>
-        <a href="#" class="ff-sans-cond uppercase text-white letter-spacing-2"><img src="/img/shopping-cart-solid.svg" alt="cart__icon" class="cart__icon"></a>
+        <a href="/cart" class="ff-sans-cond uppercase text-white letter-spacing-2"><img src="/img/shopping-cart-solid.svg" alt="cart__icon" class="cart__icon"></a>
         </ul>
       </nav>
     `;
