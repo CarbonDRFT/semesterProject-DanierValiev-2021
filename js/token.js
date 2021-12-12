@@ -43,7 +43,7 @@ const processData = (data) => {
   loader.style.display = null;
   if (data.alert) {
     showAlert(data.alert);
-  } else if (data.name) {
+  } else if (data.fullName) {
     //create authToken
     data.authToken = generateToken(data.email);
     sessionStorage.user = JSON.stringify(data);

@@ -40,8 +40,18 @@
              </div>
 
       </section>
+
+      <section id="featured__product--slider">
+       
+      </section>
     </main>
     <script src="/js/nav.js"></script>
     <script src="/server.js"></script>
+    <script src="/js/home.js"></script>
+
+    <script>
+      getProducts('Discount').then(data => createProductSlider(data, '#featured__product--slider', 'Discount'))
+      getProducts('Men Tshirt').then(data => createProductSlider(data, '#men-tshirt-products-2', 'Men T-shirt'))
+  </script>
   </body>
 </html>

@@ -122,3 +122,27 @@
   white-space: pre-wrap;
   margin-bottom: 50px;
 }
+
+.container__for__card--slider {
+  height: auto;
+}
+
+.product {
+  padding: 0 10vw;
+  overflow: visible;
+  height: auto;
+}
+
+.product__container {
+  position: relative;
+  overflow-x: visible;
+}
+
+.product__card {
+  height: auto;
+}
+
+.product__info {
+  height: auto;
+  display: block;
+}
