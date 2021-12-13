@@ -35,7 +35,7 @@ const createNav = () => {
           </li>
           <li class="active">
             <a
-              href="#"
+              href="/seller"
               class="ff-sans-cond uppercase text-white letter-spacing-2"
               ><span area-hidden="true"></span>Dashboard</a
             >

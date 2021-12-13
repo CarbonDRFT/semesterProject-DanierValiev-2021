@@ -23,12 +23,14 @@
 .logo__container {
   position: fixed;
   top: 1rem;
+  z-index: 1000;
 }
 
 #navbar {
   position: fixed;
   right: 0rem;
   top: 1rem;
+  z-index: 1000;
 }
 
 .search {
