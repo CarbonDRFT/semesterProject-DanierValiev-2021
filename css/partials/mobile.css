@@ -34,6 +34,14 @@
   .mobile__nav--toggle[aria-expanded="true"] {
     background-image: url("/img/times-solid.svg");
   }
+
+  .product__form {
+    width: 85%;
+  }
+  .product__info--container > #product__name,
+  .product__info--container > #short__des {
+    width: 100%;
+  }
 }
 
 @media (min-width: 35em) {

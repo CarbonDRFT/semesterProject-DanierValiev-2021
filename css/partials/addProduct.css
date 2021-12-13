@@ -19,6 +19,16 @@
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  width: 100%;
+}
+
+.product__info--container > #product__name,
+.product__info--container > #short__des {
+  width: 50%;
+}
+.product__info--container > #product__description {
+  flex: 100%;
+  height: 10rem;
 }
 
 .seller__product--info {
@@ -70,7 +80,7 @@
   text-align: center;
 }
 
-@media (min-width: 30em) {
+@media (min-width: 40rem) {
   .seller__product--info {
     grid-template-areas:
       "one one"
@@ -79,7 +89,7 @@
   }
 }
 
-@media (min-width: 50em) {
+@media (min-width: 50rem) {
   .seller__product--info {
     grid-template-areas:
       "two two one "
