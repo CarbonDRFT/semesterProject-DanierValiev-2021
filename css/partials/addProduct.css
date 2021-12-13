@@ -34,6 +34,7 @@
   grid-row: span 2;
   text-shadow: 0 0 10px #fff;
   width: 30rem;
+  z-index: -2;
 }
 
 .text {

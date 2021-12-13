@@ -3,6 +3,7 @@ const express = require("express");
 const admin = require("firebase-admin");
 const bcrypt = require("bcrypt");
 const path = require("path");
+const nodemailer = require("nodemailer");
 
 //firebase admin setup
 let serviceAccount = require("./semester-project-5a573-firebase-adminsdk-xmrfj-716a7a9d0b.json");
@@ -338,6 +339,105 @@ app.get("/search/:key", (req, res) => {
 app.get("/cart", (req, res) => {
   res.sendFile(path.join(staticPath, "cart.html"));
 });
+
+app.get("/checkout", (req, res) => {
+  res.sendFile(path.join(staticPath, "checkout.html"));
+});
+
+app.post("/order", (req, res) => {
+  const { order, email, add } = req.body;
+  let transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD,
+    },
+  });
+
+  let docName = email + Math.floor(Math.random() * 123456789);
+});
+
+// const mailOption = {
+//   from: "valid sender email id",
+//   to: email,
+//   subject: "ExSport : Order placed",
+//   html: `
+//   <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
+
+//     <style>
+//         body{
+//             min-height: 90vh;
+//             background: #f5f5f5;
+//             font-family: sans-serif;
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//         }
+//         .heading{
+//             text-align: center;
+//             font-size: 40px;
+//             width: 50%;
+//             display: block;
+//             line-height: 50px;
+//             margin: 30px auto 60px;
+//             text-transform: capitalize;
+//         }
+//         .heading span{
+//             font-weight: 300;
+//         }
+//         .btn{
+//             width: 200px;
+//             height: 50px;
+//             border-radius: 5px;
+//             background: #3f3f3f;
+//             color: #fff;
+//             display: block;
+//             margin: auto;
+//             font-size: 18px;
+//             text-transform: capitalize;
+//         }
+//     </style>
+
+// </head>
+// <body>
+
+//     <div>
+//         <h1 class="heading">dear ${
+//           email.split("@")[0]
+//         }, <span>your order is successfully placed</span></h1>
+//         <button class="btn">check status</button>
+//     </div>
+
+// </body>
+// </html>
+//   `,
+// };
+
+// app.post("/order", (req, res) => {
+//   const { order, email, add } = req.body;
+//   let docName = email + Math.floor(Math.random() * 12345678912345);
+//   db.collection("order")
+//     .doc(docName)
+//     .set(req.body)
+//     .then((data) => {
+//       transporter.sendMail(mailOption, (err, info) => {
+//         if (err) {
+//           res.json({
+//             aler: "opps! its seems like some err occured. Try again",
+//           });
+//         } else {
+//           res.json({ alert: "Your order is placed" });
+//         }
+//       });
+//       res.json("done");
+//     });
+// });
 
 //404 route
 app.get("/404", (req, res) => {

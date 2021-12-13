@@ -1,0 +1,45 @@
+@media (max-width: 35rem) {
+  .primary-navigation {
+    position: fixed;
+    inset: 0 0 0 30%;
+    gap: 2em;
+    z-index: 1000;
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2rem;
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(1rem);
+
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+  }
+
+  .primary-navigation[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+  .mobile__nav--toggle {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    background-color: transparent;
+    background: url("/img/hamburger-toggle.svg");
+    background-repeat: no-repeat;
+    border: 0;
+    width: 2rem;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .mobile__nav--toggle[aria-expanded="true"] {
+    background-image: url("/img/times-solid.svg");
+  }
+}
+
+@media (min-width: 35em) {
+  .primary-navigation {
+    gap: 3rem;
+    padding-block: 2rem;
+    padding-inline: clamp(3rem, 5vw, 3rem);
+  }
+}

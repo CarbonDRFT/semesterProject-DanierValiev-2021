@@ -22,9 +22,7 @@
   margin: 3rem auto;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
+input:not(.search__box, .checkbox, .size__checkbox, input[type="file"]),
 textarea {
   display: block;
   width: 30rem;

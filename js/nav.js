@@ -23,21 +23,21 @@ const createNav = () => {
             <a
               href="#"
               class="ff-sans-cond uppercase text-white letter-spacing-2"
-              ><span area-hidden="true"> 01</span>Products</a
+              ><span area-hidden="true"></span>Products</a
             >
           </li>
           <li class="active">
             <a
               href="#"
               class="ff-sans-cond uppercase text-white letter-spacing-2"
-              ><span area-hidden="true"> 02</span>About Us</a
+              ><span area-hidden="true"></span>About Us</a
             >
           </li>
           <li class="active">
             <a
               href="#"
               class="ff-sans-cond uppercase text-white letter-spacing-2"
-              ><span area-hidden="true"> 03</span>Contact us</a
+              ><span area-hidden="true"></span>Dashboard</a
             >
           </li>
           <div class="search"><input type="text" class="search__box" id="search__box" placeholder="search brand, product">

@@ -1,12 +1,40 @@
 :root {
-  --mainColor: #387780;
-  --secondColor: #63585e;
-  --greyColor: #c4cad0;
+  --mainColor: #19204e;
+  --secondColor: #fcb300;
+  --greyColor: #d6d6d6;
+  --redColor: #df1b3f;
   --mainFont: "roboto", sans-serif;
   --desktopH1: 50px;
+  --fontBold: 700;
+  --fontMed: 500;
+  --fontReg: 400;
+  --fontlight: 200;
   --desktopH2: 37px;
   --desktoph3: 28px;
   --desktop-p: 16px;
+}
+
+@media (min-width: 35em) and (max-width: 55em) {
+  :root {
+    --mobileH1: 40px;
+    --mobileH2: 30px;
+    --mobileH3: 22px;
+    --mobile-p: 16px;
+  }
+}
+
+@media (max-width: 35rem) {
+  :root {
+    --mobileH1: 32px;
+    --mobileH2: 26px;
+    --mobileH3: 20px;
+    --mobile-p: 16px;
+  }
+}
+
+html {
+  max-width: 1800px !important;
+  margin: auto;
 }
 
 * {
@@ -19,7 +47,7 @@
 
 body {
   background-color: thistle;
-  height: 2000px;
+  height: auto;
   width: 100%;
 }
 
@@ -37,74 +65,16 @@ span {
 p {
   font-size: var(--desktop-p);
 }
+h1 {
+  font-size: var(--desktopH1);
+}
 
 h2 {
   font-size: var(--desktopH2);
+  font-weight: var(--fontMed);
 }
 
 h3 {
   font-size: var(--desktoph3);
-}
-
-.primary-navigation a {
-  text-decoration: none;
-  font-size: var(--desktop-p);
-  color: var(--secondColor);
-}
-
-.primary-navigation a > [area-hidden="true"] {
-  font-weight: 700;
-  margin-inline-end: 0.75rem;
-}
-
-@media (max-width: 35rem) {
-  .primary-navigation {
-    position: fixed;
-    inset: 0 0 0 30%;
-    gap: 2em;
-    z-index: 1000;
-    flex-direction: column;
-    padding: min(30vh, 10rem) 2rem;
-    background: hsl(0 0% 100% / 0.1);
-    backdrop-filter: blur(1rem);
-
-    transform: translateX(100%);
-    transition: transform 350ms ease-out;
-  }
-
-  .primary-navigation[data-visible="true"] {
-    transform: translateX(0%);
-  }
-
-  .mobile__nav--toggle {
-    display: block;
-    position: absolute;
-    z-index: 9999;
-    background-color: transparent;
-    background: url("/img/hamburger-toggle.svg");
-    background-repeat: no-repeat;
-    border: 0;
-    width: 2rem;
-    aspect-ratio: 1;
-    top: 2rem;
-    right: 2rem;
-  }
-
-  .mobile__nav--toggle[aria-expanded="true"] {
-    background-image: url("/img/times-solid.svg");
-  }
-}
-
-@media (min-width: 35em) and (max-width: 55em) {
-  .primary-navigation a > span[area-hidden] {
-    display: none;
-  }
-}
-
-@media (min-width: 35em) {
-  .primary-navigation {
-    gap: 3rem;
-    padding-block: 2rem;
-    padding-inline: clamp(3rem, 5vw, 3rem);
-  }
+  font-weight: var(--fontReg);
 }

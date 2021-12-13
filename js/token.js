@@ -60,10 +60,17 @@ const processData = (data) => {
 };
 
 // Alert function
-const showAlert = (msg) => {
+const showAlert = (msg, type) => {
   let alertBox = document.querySelector(".alert__box");
   let alertMsg = document.querySelector(".alert__msg");
+  let alertImg = document.querySelector(".alert__img");
   alertMsg.innerHTML = msg;
+
+  if ((type = "success")) {
+    alertImg.src = "img/success.png";
+    alertMsg.style.color = "#0ab50a";
+  }
+
   alertBox.classList.add("show");
   setTimeout(() => {
     alertBox.classList.remove("show");

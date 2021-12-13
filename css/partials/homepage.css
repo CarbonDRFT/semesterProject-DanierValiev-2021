@@ -1,9 +1,67 @@
-h1 {
-  font-size: 1.25em;
-  color: #555;
-  font-weight: bold;
-  text-align: center;
+.header__section {
+  position: relative;
+  width: 100%;
+  height: 60rem;
 }
+
+.header__banner--img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+.image__overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+.header__info--container {
+  position: absolute;
+  right: 8rem;
+  top: 10rem;
+  height: 40rem;
+  width: clamp(30rem, 60%, 60rem);
+  background: rgb(255, 255, 255, 0.8);
+  z-index: 3;
+  border-radius: 1rem;
+}
+
+.header__text--container {
+  margin: 2rem;
+}
+
+.header__text__button--container {
+  display: flex;
+  gap: 1rem;
+  margin: 5rem 2rem 2rem 2rem;
+}
+
+.header__btn {
+  padding: 1rem;
+  font-size: var(--desktop-p);
+  outline: none;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.header__text__product--btn {
+  background: var(--mainColor);
+  color: white;
+}
+
+.header__text__discount--btn {
+  background: var(--secondColor);
+  color: white;
+}
+
 .header__video {
   position: relative;
   width: 100%;
@@ -126,12 +184,12 @@ h1 {
   text-transform: capitalize;
 }
 
-.product__container {
+/* .product__container {
   padding: 0 10vw;
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-}
+} */
 
 .product__container::-webkit-scrollbar {
   display: none;
@@ -291,4 +349,36 @@ h1 {
 .collection:nth-child(3) {
   grid-column: span 2;
   margin-bottom: 10px;
+}
+
+@media (max-width: 35rem) {
+  .header__section {
+    margin-bottom: 30rem;
+  }
+
+  .header__info--container {
+    right: 50%;
+    transform: translateX(50%);
+    margin: auto;
+    top: 40rem;
+    display: block;
+    width: clamp(35rem, 70%, 80rem);
+  }
+
+  .header__text--title {
+    font-size: var(--mobileH1);
+  }
+
+  .header__text--subtitle {
+    font-size: var(--mobileH2);
+    margin: 2rem auto;
+  }
+
+  .header__text--description {
+    font-size: var(--mobileH3);
+  }
+
+  .header__text__button--container {
+    justify-content: center;
+  }
 }

@@ -1,0 +1,35 @@
+footer {
+  text-align: center;
+  margin: auto;
+  height: auto;
+  width: 100%;
+  background: var(--mainColor);
+}
+
+.footernav {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  margin: 2rem auto;
+  padding: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.footer__nav--link {
+  font-size: var(--desktop-p);
+  text-decoration: none;
+  color: white;
+}
+
+.footer__logo {
+  text-align: center;
+  margin: auto;
+  width: 15rem;
+  height: auto;
+}
+
+.site__creator {
+  text-align: center;
+  margin: 3rem 0 1rem 0;
+}

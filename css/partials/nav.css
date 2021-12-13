@@ -1,5 +1,16 @@
 /* Primary header */
 
+.primary-navigation a {
+  text-decoration: none;
+  font-size: var(--desktop-p);
+  color: var(--secondColor);
+}
+
+.primary-navigation a > [area-hidden="true"] {
+  font-weight: 700;
+  margin-inline-end: 0.75rem;
+}
+
 .flex {
   display: flex;
   gap: 1rem;
@@ -64,6 +75,7 @@
 .primary__header {
   align-items: center;
   justify-content: space-between;
+  z-index: 100;
 }
 
 .sr-only {

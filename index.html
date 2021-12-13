@@ -17,41 +17,50 @@
     <header class="primary__header flex"></header>
     <main class="front__page">
       <section class="header__section">
-
-        <div class="header__video">
-
-            <video loop muted autoplay>
-               <source src="/img/header-video.mp4" type="video/mp4">
-            </video>
-            
-            <div class="slider">
-             <div class="slider__1">
-               <h2>title</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi risus, mollis at sollicitudin sed, ullamcorper eget enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam nec egestas tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                </p>
-             </div>
-            
-             <div class="slider2">
-                <h2>title</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mi risus, mollis at sollicitudin sed, ullamcorper eget enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam nec egestas tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                </p>   
-             </div>
-
+        <img
+          src="/img/adidas-banner-img.jpg"
+          alt="welcome_to_ExSport"
+          class="header__banner--img"
+        />
+        <div class="image__overlay"></div>
+        <div class="header__info--container">
+          <div class="header__text--container">
+            <h1 class="header__text--title">Find your perfect style</h1>
+            <h2 class="header__text--subtitle">
+              Stay true to yourself, choose the style that makes you,the you
+            </h2>
+            <h3 class="header__text--description">
+              We offer variations of clothes from Adidas
+            </h3>
+          </div>
+          <div class="header__text__button--container">
+            <button class="header__text__product--btn header__btn">
+              See our selection
+            </button>
+            <button class="header__text__discount--btn header__btn">
+              25% off Adizero Jacket
+            </button>
+          </div>
+        </div>
       </section>
 
-      <section id="featured__product--slider">
-       
-      </section>
+      <section id="featured__product--slider"></section>
     </main>
+
+    <footer>
+      <div class="footernav"></footer>
     <script src="/js/nav.js"></script>
     <script src="/server.js"></script>
     <script src="/js/home.js"></script>
+    <script src="/js/footer.js"></script>
 
     <script>
-      getProducts('Discount').then(data => createProductSlider(data, '#featured__product--slider', 'Discount'))
-      getProducts('Men Tshirt').then(data => createProductSlider(data, '#men-tshirt-products-2', 'Men T-shirt'))
-  </script>
+      getProducts("Discount").then((data) =>
+        createProductSlider(data, "#featured__product--slider", "Discount")
+      );
+      getProducts("Men Tshirt").then((data) =>
+        createProductSlider(data, "#men-tshirt-products-2", "Men T-shirt")
+      );
+    </script>
   </body>
 </html>

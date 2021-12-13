@@ -66,14 +66,20 @@
 
 /* Product listing */
 
+.dashboard__header {
+  text-align: center;
+  margin: 10rem auto 2rem auto;
+}
+
 .add__product {
-  width: 70%;
+  width: 80%;
   background: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   border-radius: 1rem;
+  margin: auto;
 }
 
 .add__product--title {
@@ -103,10 +109,13 @@
 .product__container {
   padding: 0;
   margin: 3rem;
-  position: absolute;
   display: flex;
   flex-wrap: wrap;
   gap: 5rem;
+  justify-content: center;
+  position: relative;
+  overflow-x: visible;
+  scroll-behavior: smooth;
 }
 
 .tag {

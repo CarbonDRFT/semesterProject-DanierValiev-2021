@@ -133,10 +133,10 @@
   height: auto;
 }
 
-.product__container {
+/* .product__container {
   position: relative;
   overflow-x: visible;
-}
+} */
 
 .product__card {
   height: auto;
