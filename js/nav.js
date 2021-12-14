@@ -1,7 +1,7 @@
 const createNav = () => {
   let nav = document.querySelector(".primary__header", ".flex");
   nav.innerHTML = `
-    <div class="logo__container">
+    <div class="logo__container" onclick="location.href="/index.html"'>
         <img src="../img/logo.png" alt="logo" class="logo" />
       </div>
 
@@ -21,7 +21,7 @@ const createNav = () => {
         >
           <li class="active">
             <a
-              href="#"
+              href="/productlist.html"
               class="ff-sans-cond uppercase text-white letter-spacing-2"
               ><span area-hidden="true"></span>Products</a
             >

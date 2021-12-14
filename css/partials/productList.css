@@ -1,0 +1,42 @@
+.productlist__category {
+  position: relative;
+  height: 30rem;
+  width: 100%;
+  background: #fff;
+}
+
+.productlist__category--container {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin: auto;
+  align-items: flex-end;
+  height: 100%;
+  padding-bottom: 3rem;
+}
+
+.productlist__link {
+  list-style: none;
+}
+
+.productlist__link > a {
+  text-decoration: none;
+  font-size: var(--desktop-p);
+}
+
+.productlist__container {
+  width: 80%;
+  margin: auto;
+}
+
+.men__product--section,
+.women__product--section,
+.kids__product--section {
+}
+
+.female__product--section {
+  margin: 4rem 0;
+}
+
+.men__product--cards {
+}
