@@ -367,7 +367,7 @@ app.get("/search/:key", (req, res) => {
   res.sendFile(path.join(staticPath, "search.html"));
 });
 
-app.get("/productlist", (req, res) => {
+app.get("/productlist/:key", (req, res) => {
   res.sendFile(path.join(staticPath, "productList.html"));
 });
 

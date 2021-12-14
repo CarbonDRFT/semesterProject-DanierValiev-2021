@@ -32,23 +32,23 @@ placeOrderBtn.addEventListener("click", () => {
 
 const getAddress = () => {
   // validation
+  let fullCustName = document.querySelector("#fullName").value;
+  let email = document.querySelector("#email").value;
   let address = document.querySelector("#address").value;
-  let street = document.querySelector("#street").value;
-  let city = document.querySelector("#city").value;
-  let state = document.querySelector("#state").value;
   let pincode = document.querySelector("#pincode").value;
-  let landmark = document.querySelector("#landmark").value;
+  let city = document.querySelector("#city").value;
+  let country = document.querySelector("#country").value;
 
   if (
+    !fullCustName.length ||
+    !email.length ||
     !address.length ||
-    !street.length ||
-    !city.length ||
-    !state.length ||
     !pincode.length ||
-    !landmark.length
+    !city.length ||
+    !country.length
   ) {
     return showAlert("fill all the inputs first");
   } else {
-    return { address, street, city, state, pincode, landmark };
+    return { fullCustName, email, address, pincode, city, country };
   }
 };
