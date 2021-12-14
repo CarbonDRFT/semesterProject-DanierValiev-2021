@@ -17,7 +17,7 @@
 }
 
 .logo {
-  margin: 2rem 3rem;
+  width: 18rem;
 }
 
 .logo__container {
@@ -36,12 +36,12 @@
 .search {
   display: flex;
   width: 20rem;
+  font-size: var(--desktop-p);
 }
 
 #search__box {
   width: 80%;
-  height: 2rem;
-  padding: 1rem;
+  padding-left: 1rem;
   margin: 0;
   border-radius: 0;
   border-top-left-radius: 1rem;
@@ -55,8 +55,6 @@
 
 .search__btn {
   width: 40%;
-  height: 2.1rem;
-  /* padding: 1rem 2rem; */
   border: none;
   outline: none;
   cursor: pointer;
@@ -78,6 +76,8 @@
   align-items: center;
   justify-content: space-between;
   z-index: 100;
+  width: 80%;
+  margin: auto;
 }
 
 .sr-only {

@@ -11,6 +11,11 @@
   <body>
     <header class="primary__header flex"></header>
 
+    <div class="go__back">
+      <a href="/productlist.html"><u>products</u></a>
+      <span>/</span>
+      <a href="/product.html"><u>current product</u></a>
+    </div>
     <section class="product__details">
       <div class="image__slider">
         <div class="product__images">
@@ -23,9 +28,11 @@
       <div class="details">
         <h2 class="product__brand"></h2>
         <p class="product__short--des"></p>
-        <span class="product__price"></span>
-        <span class="product__actual--price"></span>
-        <span class="product__discount"></span>
+        <div class="product__price--conatiner">
+          <span class="product__price"></span>
+          <span class="product__actual--price"></span>
+          <span class="product__discount"></span>
+        </div>
 
         <p class="product__sub--heading">select size</p>
 
@@ -63,5 +70,6 @@
     <script src="/js/nav.js"></script>
     <script src="/js/home.js"></script>
     <script src="/js/product.js"></script>
+    <script src="/js/footer.js"></script>
   </body>
 </html>

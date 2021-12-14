@@ -34,3 +34,9 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 110rem) {
+  .details {
+    width: 100%;
+  }
+}

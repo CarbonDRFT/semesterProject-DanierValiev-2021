@@ -1,8 +1,24 @@
+.go__back {
+  width: 75%;
+  display: flex;
+  position: relative;
+  margin: 15rem auto 0 auto;
+}
+
+.go__back > a {
+  font-size: var(--desktop-p);
+  text-decoration: none;
+  color: var(--mainColor);
+  font-weight: 500;
+}
+
 .product__details {
   width: 100%;
-  padding: 60px 10vw;
+  padding: 4rem 10vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .image__slider {
@@ -10,9 +26,11 @@
   height: 500px;
   position: relative;
   background-size: cover;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgb(158, 158, 158, 0.7);
 }
 
-.product__images {
+.image__slider > .product__images {
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -36,6 +54,7 @@
 
 .product__images img.active {
   opacity: 0.5;
+  background: white;
 }
 
 .details {
@@ -54,6 +73,11 @@
   margin: 15px 0 30px;
 }
 
+.product__price--conatiner {
+  display: flex;
+  gap: 1rem;
+}
+
 .product__price {
   font-weight: 700;
   font-size: 30px;
@@ -63,52 +87,64 @@
   font-size: 30px;
   opacity: 0.5;
   text-decoration: line-through;
-  margin: 0 20px;
   font-weight: 300;
 }
 
 .product__discount {
-  color: #ff7d7d;
-  font-size: 20px;
+  color: var(--redColor);
 }
 
 .product__sub--heading {
   font-size: 30px;
   text-transform: uppercase;
-  margin: 60px 0 10px;
+  margin: 4rem 0 1rem;
   font-weight: 300;
+}
+
+.details > input {
+  width: 6rem !important;
+  display: none !important;
 }
 
 .size__radio--btn {
   display: inline-block;
-  width: 80px;
-  height: 80px;
+  width: 5rem;
+  height: 5rem;
   text-align: center;
   font-size: 20px;
-  border: 1px solid #383838;
+  border: 1px solid var(--secondColor);
   border-radius: 50%;
   margin: 10px;
   margin-left: 0;
-  line-height: 80px;
+  line-height: 5rem;
   text-transform: uppercase;
-  color: #383838;
+  color: var(--mainColor);
   cursor: pointer;
+  background: var(--greyColor);
 }
 
 .size__radio--btn.check {
-  background: #383838;
+  background: var(--secondColor);
   color: #fff;
+}
+
+.btn__group {
+  margin: 1rem 0;
 }
 
 .cart__btn {
   margin-right: 2%;
-  background: #383838;
+  background: var(--secondColor);
   color: #fff;
 }
 
 .detail__des {
-  padding: 0 10vw;
-  text-transform: capitalize;
+  width: 75%;
+  margin: auto;
+}
+
+.detail__des > .heading {
+  padding: 0;
 }
 
 .heading {
@@ -117,7 +153,7 @@
 }
 
 .des {
-  color: #383838;
+  color: var(--mainColor);
   line-height: 25px;
   white-space: pre-wrap;
   margin-bottom: 50px;

@@ -109,14 +109,20 @@
 
 .product__container {
   padding: 0;
-  margin: 3rem;
+  margin: 3rem auto;
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
-  gap: 5rem;
+  gap: 4rem;
   justify-content: center;
   position: relative;
   overflow-x: visible;
   scroll-behavior: smooth;
+}
+
+.product__form > #tags {
+  width: 100%;
+  height: 4rem;
 }
 
 .tag {
@@ -241,4 +247,8 @@
   display: block !important;
   height: auto !important;
   grid: none !important;
+}
+
+.product__info--sellerPage > h3 {
+  font-size: 20px;
 }

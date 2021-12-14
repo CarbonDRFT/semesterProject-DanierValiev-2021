@@ -1,14 +1,14 @@
 .search__results {
-  width: 100%;
-  padding: 60px 0;
+  width: 80%;
+  margin: auto;
 }
 
-.heading {
-  font-size: 20px;
+.search__title {
+  font-size: 2rem;
   text-transform: capitalize;
   font-weight: 400;
-  margin-bottom: 40px;
-  padding: 0 10vw;
+  margin: 15rem auto 3rem auto;
+  width: 100%;
 }
 
 .heading span {

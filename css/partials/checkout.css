@@ -1,6 +1,6 @@
-.form {
-  width: 100%;
-  padding: 20px 10vw;
+.checkout__form--section {
+  width: 80%;
+  margin: 15rem auto 5rem auto;
 }
 
 .heading {
@@ -10,9 +10,14 @@
   margin-bottom: 20px;
 }
 
-.form input {
-  background: #f5f5f5 !important;
-  width: 100% !important;
+.checkout__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.checkout__form :is(#address, #street, #landmark) {
+  width: 30rem;
 }
 
 .three__input--container {
@@ -22,8 +27,4 @@
 
 .three__input--container input {
   margin: 0 !important;
-}
-
-#state {
-  margin: 0 20px !important;
 }

@@ -1,6 +1,5 @@
 .product__body {
-  background: url(/img/white-blank-concrete-wall-with-wooden-floor.jpg);
-  height: auto;
+  background: var(--greyColor);
   max-width: 1800px;
 }
 
@@ -108,6 +107,7 @@
   text-shadow: 0 0 10px #fff;
   width: 30rem;
   z-index: -2;
+  box-shadow: 0 0 0.5rem rgba(85, 85, 85, 0.2);
 }
 
 .text {
@@ -170,12 +170,12 @@
   width: 100px;
   height: 40px;
   border-radius: 5px;
-  border: 1px solid #383838;
+  border: 1px solid var(--secondColor);
   cursor: pointer;
   margin-bottom: 10px;
   margin-right: 10px;
   position: relative;
-  color: #383838;
+  color: var(--secondColor);
 }
 
 .size__checkbox::after {
@@ -189,7 +189,7 @@
 }
 
 .size__checkbox:checked {
-  background: #383838;
+  background: var(--secondColor);
   color: #fff;
 }
 
@@ -228,6 +228,9 @@ input::-webkit-inner-spin-button {
 
 .buttons {
   margin: 20px 0 50px;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .btn {

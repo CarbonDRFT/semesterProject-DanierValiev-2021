@@ -46,7 +46,7 @@ html {
 }
 
 body {
-  background-color: thistle;
+  background: var(--greyColor);
   height: auto;
   width: 100%;
 }
@@ -77,4 +77,8 @@ h2 {
 h3 {
   font-size: var(--desktoph3);
   font-weight: var(--fontReg);
+}
+
+::placeholder {
+  color: rgba(25, 32, 78, 0.7) !important;
 }

@@ -2,7 +2,7 @@ const createNav = () => {
   let nav = document.querySelector(".primary__header", ".flex");
   nav.innerHTML = `
     <div class="logo__container">
-        <img src="../img/logo.png" alt="logo" />
+        <img src="../img/logo.png" alt="logo" class="logo" />
       </div>
 
       <button
@@ -40,7 +40,7 @@ const createNav = () => {
               ><span area-hidden="true"></span>Dashboard</a
             >
           </li>
-          <div class="search"><input type="text" class="search__box" id="search__box" placeholder="search brand, product">
+          <div class="search"><input type="text" class="search__box" id="search__box" placeholder="search product">
         <button class="search__btn">search</button></div>
         <a  class="ff-sans-cond uppercase text-white letter-spacing-2">
         <img src="/img/user-circle-solid.svg" alt="login__icon" class="login__icon">
