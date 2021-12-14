@@ -13,45 +13,52 @@
     <div class="productlist__category">
       <ul class="productlist__category--container">
         <li class="productlist__link">
-          <a href="#" class="all__products">All</a>
+          <a href="#" class="all__products" target-element="all">All</a>
         </li>
         <li class="productlist__link">
-          <a href="#" class="men__products">Men</a>
+          <a
+            href="#"
+            class="men__products"
+            target-element="men__product--section"
+            >Men</a
+          >
         </li>
         <li class="productlist__link">
-          <a href="#" class="women__products">Women</a>
+          <a
+            href="#"
+            class="women__products"
+            target-element="female__product--section"
+            >Women</a
+          >
         </li>
         <li class="productlist__link">
-          <a href="#" class="kids__products">Kids</a>
+          <a
+            href="#"
+            class="kids__products"
+            target-element="kids__product--section"
+            >Kids</a
+          >
         </li>
       </ul>
     </div>
 
     <section class="productlist__container">
-      <section class="men__product--section">
-        <h2 class="men__product--title">Men</h2>
-        <div class="men__product--container">
-          <div class="men__product--cards"></div>
-        </div>
-      </section>
+      <section
+        class="product-categories-section men__product--section"
+      ></section>
 
-      <section class="female__product--section">
-        <h2 class="female__product--title">Women</h2>
-        <div class="female__product--container">
-          <div class="female__product--cards"></div>
-        </div>
-      </section>
-      <section class="kids__product--section">
-        <h2 class="kids__product--title">Kids</h2>
-        <div class="kids__product--container">
-          <div class="kids__product--cards"></div>
-        </div>
-      </section>
+      <section
+        class="product-categories-section female__product--section"
+      ></section>
+      <section
+        class="product-categories-section kids__product--section"
+      ></section>
     </section>
 
     <footer></footer>
 
     <script src="/js/nav.js"></script>
+    <script src="/js/slider.js"></script>
     <script src="/js/token.js"></script>
     <script src="/server.js"></script>
     <script src="/js/productlist.js"></script>

@@ -27,20 +27,17 @@ const createNav = () => {
               ><span area-hidden="true"></span>Products</a
             >
           </li>
-          <li class="active">
-            <a
-              href="#"
-              class="ff-sans-cond uppercase text-white letter-spacing-2"
-              ><span area-hidden="true"></span>About Us</a
-            >
-          </li>
-          <li class="active">
-            <a
-              href="/seller"
-              class="ff-sans-cond uppercase text-white letter-spacing-2"
-              ><span area-hidden="true"></span>Dashboard</a
-            >
-          </li>
+          ${
+            sessionStorage.user != undefined
+              ? `<li class="active">
+          <a
+            href="/seller"
+            class="ff-sans-cond uppercase text-white letter-spacing-2"
+            ><span area-hidden="true"></span>Dashboard</a
+          >
+        </li>`
+              : ""
+          }
           <div class="search"><input type="text" class="search__box" id="search__box" placeholder="search product">
         <button class="search__btn">search</button></div>
         <a  class="ff-sans-cond uppercase text-white letter-spacing-2">
