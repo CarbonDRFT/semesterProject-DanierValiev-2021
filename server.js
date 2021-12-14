@@ -320,6 +320,30 @@ app.post("/get-products", (req, res) => {
   });
 });
 
+// featured product route
+app.get("/featured-products", (req, res) => {
+  let docRef = db
+    .collection("products")
+    .where("tags", "array-contains", "discount", "Discount");
+
+  docRef.get().then((products) => {
+    if (products.empty) {
+      return res.json("no featured products");
+    }
+    let featuredProductArr = [];
+
+    products.forEach((item) => {
+      let data = item.data();
+      data.id = item.id;
+      if (featuredProductArr.length < 6) {
+        featuredProductArr.push(data);
+      }
+    });
+
+    res.json(featuredProductArr);
+  });
+});
+
 app.post("/delete-product", (req, res) => {
   let { id } = req.body;
 

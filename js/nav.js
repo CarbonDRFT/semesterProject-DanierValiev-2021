@@ -1,7 +1,8 @@
 const createNav = () => {
   let nav = document.querySelector(".primary__header", ".flex");
   nav.innerHTML = `
-    <div class="logo__container" onclick="location.href="/index.html"'>
+    <div class="logo__container" onclick="location.href = 
+    '/index.html'">
         <img src="../img/logo.png" alt="logo" class="logo" />
       </div>
 

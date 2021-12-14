@@ -44,23 +44,26 @@
         </div>
       </section>
 
-      <section id="featured__product--slider"></section>
+      <section id="featured__product--slider">
+        <div class="slider-container swiper">
+          <h1 class="slider-title">featured products</h1>
+          <button class="pre-loop-btn swiper-button-pre"><img src="img/arrow.png" alt=""></button>
+          <button class="nxt-loop-btn swiper-button-nxt"><img src="img/arrow.png" alt=""></button>
+          <div class="featured-product-container swiper-wrapper">
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
       <div class="footernav"></footer>
-    <script src="/js/nav.js"></script>
-    <script src="/server.js"></script>
-    <script src="/js/home.js"></script>
-    <script src="/js/footer.js"></script>
+        <script src="/js/nav.js"></script>
+        <script src="/server.js"></script>
+        <script src="/js/slider.js"></script>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="/js/featuredProduct.js"></script>
+        <script src="/js/footer.js"></script>
 
-    <script>
-      getProducts("Discount").then((data) =>
-        createProductSlider(data, "#featured__product--slider", "Discount")
-      );
-      getProducts("Men Tshirt").then((data) =>
-        createProductSlider(data, "#men-tshirt-products-2", "Men T-shirt")
-      );
-    </script>
+    
   </body>
 </html>

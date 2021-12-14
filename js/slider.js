@@ -37,13 +37,13 @@ const createProductSlider = (data, parent, title) => {
   let slideContainer = document.querySelector(`${parent}`);
 
   slideContainer.innerHTML += `
-    <section class="product">
-        <h2 class="product__category">${title}</h2>
-        <button class="pre__btn"><img src="../img/arrow.png" alt=""></button>
-        <button class="nxt__btn"><img src="../img/arrow.png" alt=""></button>
-        ${createProductCards(data)}
-    </section>
-    `;
+      <section class="product">
+          <h2 class="product__category">${title}</h2>
+          <button class="pre__btn"><img src="../img/arrow.png" alt=""></button>
+          <button class="nxt__btn"><img src="../img/arrow.png" alt=""></button>
+          ${createProductCards(data)}
+      </section>
+      `;
   setupSlidingEffect();
 };
 
@@ -56,18 +56,30 @@ const createProductCards = (data, parent) => {
   for (let i = 0; i < data.length; i++) {
     if (data[i].id != decodeURI(location.pathname.split("/").pop())) {
       middle += `
-            <div class="product__card">
-                <div class="product__image">
-                    <span class="discount__tag">${data[i].discount}% off</span>
-                    <img src="${data[i].images[0]}" class="product__thumb" alt="">
-                </div>
-                <div class="product__info" onclick="location.href = '/products/${data[i].id}'">
-                    <h2 class="product__brand">${data[i].name}</h2>
-                    <p class="product__short--des">${data[i].shortDes}</p>
-                    <span class="price">$${data[i].sellPrice}</span> <span class="actual__price">$${data[i].actualPrice}</span>
-                </div>
-            </div>
-            `;
+              <div class="product__card">
+                  <div class="product__image">
+                  ${
+                    data[i].discount != 0
+                      ? `<span class="tag">${data[i].discount}% Off</span>`
+                      : ""
+                  }
+                      <img src="${
+                        data[i].images[0]
+                      }" class="product__thumb" alt="">
+                  </div>
+                  <div class="product__info" onclick="location.href = '/products/${
+                    data[i].id
+                  }'">
+                      <h2 class="product__brand">${data[i].name}</h2>
+                      <p class="product__short--des">${data[i].shortDes}</p>
+                      <span class="price">$${
+                        data[i].sellPrice
+                      }</span> <span class="actual__price">$${
+        data[i].actualPrice
+      }</span>
+                  </div>
+              </div>
+              `;
     }
   }
 
