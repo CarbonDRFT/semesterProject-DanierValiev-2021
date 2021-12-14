@@ -20,8 +20,7 @@
   --swiper-theme-color: #007aff;
 }
 .swiper {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 5rem auto;
   position: relative;
   overflow: hidden;
   list-style: none;
