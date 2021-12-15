@@ -161,6 +161,11 @@
   height: 18px;
 }
 
+.edit__btn:hover,
+.open__btn:hover {
+  background: var(--secondColor);
+}
+
 .open__btn {
   top: 60px;
 }

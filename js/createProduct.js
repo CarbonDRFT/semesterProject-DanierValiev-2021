@@ -1,12 +1,14 @@
 const createProduct = (data) => {
   let productContainer = document.querySelector(".product__container");
   productContainer.innerHTML += `
-    <div class="product__card">
+    <div class="product__card" >
         <div class="product__image">
             ${data.draft ? `<span class="tag">Draft</span>` : ""}            
             <img src="${
               data.images[0] || "img/no image.png"
-            } " class="product__thumb" alt="">
+            } " class="product__thumb" alt="" onclick="location.href = '/products/${
+    data.id
+  }'">
             <button class="card__action--btn edit__btn" onclick="location.href = 
             '/add-product/${data.id}'"><img src="img/edit.png" alt=""></button>
             <button class="card__action--btn open__btn" onclick="location.href = 

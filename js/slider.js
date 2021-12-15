@@ -65,7 +65,9 @@ const createProductCards = (data, parent) => {
                   }
                       <img src="${
                         data[i].images[0]
-                      }" class="product__thumb" alt="">
+                      }" class="product__thumb" alt="" onclick="location.href = '/products/${
+        data[i].id
+      }'">
                   </div>
                   <div class="product__info" onclick="location.href = '/products/${
                     data[i].id

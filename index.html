@@ -18,7 +18,7 @@
     <main class="front__page">
       <section class="header__section">
         <img
-          src="/img/adidas-banner-img.jpg"
+          src=""
           alt="welcome_to_ExSport"
           class="header__banner--img"
         />
@@ -64,6 +64,12 @@
         <script src="/js/featuredProduct.js"></script>
         <script src="/js/footer.js"></script>
 
+        <script>
+          let bannerImage = document.querySelector('.header__banner--img');
+          fetch('/bannerImage').then(res => res.json())
+          .then(url => bannerImage.src = url);
+        </script>
     
   </body>
 </html>
+

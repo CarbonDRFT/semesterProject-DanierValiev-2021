@@ -79,6 +79,15 @@ const setData = (data) => {
   cartBtn.addEventListener("click", () => {
     cartBtn.innerHTML = add_product_to_cart_or_wishlist("cart", data);
   });
+
+  const currentProduct = document.querySelector(".go__back");
+  currentProduct.innerHTML = `
+<a href="/productlist.html"><u>products</u></a>
+      <span>/</span>
+      <a href="#"><u>${data.name}</u></a>
+`;
+
+  currentProduct();
 };
 
 // fetch data

@@ -73,12 +73,14 @@ app.get("/signup", (req, res) => {
   res.sendFile(path.join(staticPath, "signup.html"));
 });
 
-// db.collection("bannerImg") // -- this is your collection name
-//   .doc(bannerImage) //-- this is your document name
-//   .get() //-- get is used to access the document
-//   .then((data) => {
-//     // process the document data here
-//   });
+app.get("/bannerImage", (req, res) => {
+  db.collection("bannerimage")
+    .doc("bannerimage")
+    .get()
+    .then((data) => {
+      res.json(data.data().banner[0]);
+    });
+});
 
 app.post("/signup", (req, res) => {
   let { name, email, password, number, tac, notification } = req.body;
@@ -377,6 +379,13 @@ app.get("/cart", (req, res) => {
 app.get("/checkout", (req, res) => {
   res.sendFile(path.join(staticPath, "checkout.html"));
 });
+
+// db.collection("order")
+//   .doc(docName)
+//   .set(req.body)
+//   .then((data) => {
+//     res.json({ alert: "Your order is placed" });
+//   });
 
 //404 route
 app.get("/404", (req, res) => {
