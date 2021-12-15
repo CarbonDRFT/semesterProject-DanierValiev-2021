@@ -1,6 +1,6 @@
 window.onload = () => {
   if (!sessionStorage.user) {
-    loaction.replace("/login");
+    location.replace("/login");
   }
 };
 
@@ -47,7 +47,7 @@ const getAddress = () => {
     !city.length ||
     !country.length
   ) {
-    return showAlert("fill all the inputs first");
+    return showAlert("fill all the inputs first", "error");
   } else {
     return { fullCustName, email, address, pincode, city, country };
   }

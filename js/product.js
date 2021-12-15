@@ -4,7 +4,7 @@ const productImageSlide = document.querySelector(".image__slider"); // seclectin
 let activeImageSlide = 0; // default slider image
 
 productImages.forEach((item, i) => {
-  // loopinh through each image thumb
+  // looping through each image thumb
   item.addEventListener("click", () => {
     // adding click event to each image thumbnail
     productImages[activeImageSlide].classList.remove("active"); // removing active class from current image thumb
@@ -68,6 +68,10 @@ const setData = (data) => {
   sellPrice.innerHTML = `$${data.sellPrice}`;
   actualPrice.innerHTML = `$${data.actualPrice}`;
   discount.innerHTML = `( ${data.discount}% off )`;
+  if (data.discount == 0) {
+    actualPrice.style.display = "none";
+    discount.style.display = "none";
+  }
 
   // wishlist and cart btn
   const wishlistBtn = document.querySelector(".wishlist__btn");

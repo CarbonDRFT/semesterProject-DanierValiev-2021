@@ -380,12 +380,21 @@ app.get("/checkout", (req, res) => {
   res.sendFile(path.join(staticPath, "checkout.html"));
 });
 
-// db.collection("order")
-//   .doc(docName)
-//   .set(req.body)
-//   .then((data) => {
-//     res.json({ alert: "Your order is placed" });
-//   });
+app.post("/order", (req, res) => {
+  const { order, email, add } = req.body;
+  let docName = email + Math.floor(Math.random() * 12345678912345);
+  db.collection("order")
+    .doc(docName)
+    .set(req.body)
+    .then((data) => {
+      res.json({ alert: "Your order is placed" });
+    })
+    .catch((err) => {
+      res.json({
+        aler: "opps! its seems like some err occured. Try again",
+      });
+    });
+});
 
 //404 route
 app.get("/404", (req, res) => {

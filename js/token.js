@@ -66,9 +66,12 @@ const showAlert = (msg, type) => {
   let alertImg = document.querySelector(".alert__img");
   alertMsg.innerHTML = msg;
 
-  if ((type = "success")) {
+  if (type === "success") {
     alertImg.src = "img/success.png";
     alertMsg.style.color = "#0ab50a";
+  } else {
+    alertImg.src = "img/error.png";
+    alertMsg.style.color = "#F00";
   }
 
   alertBox.classList.add("show");

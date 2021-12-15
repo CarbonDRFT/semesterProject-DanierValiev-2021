@@ -74,11 +74,13 @@ const createProductCards = (data, parent) => {
                   }'">
                       <h2 class="product__brand">${data[i].name}</h2>
                       <p class="product__short--des">${data[i].shortDes}</p>
-                      <span class="price">$${
-                        data[i].sellPrice
-                      }</span> <span class="actual__price">$${
-        data[i].actualPrice
-      }</span>
+                      <span class="price">$${data[i].sellPrice}
+                      ${
+                        data[i].discount != 0
+                          ? `</span> <span class="actual__price">$${data[i].actualPrice}</span>`
+                          : ""
+                      }
+                      
                   </div>
               </div>
               `;
