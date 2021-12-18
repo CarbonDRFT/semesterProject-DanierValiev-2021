@@ -13,14 +13,14 @@
   "heroku-run-build-script": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CarbonDRFT/project-exam-2021-DanierValiev.git"
+    "url": "git+https://github.com/CarbonDRFT/semesterProject-DanierValiev-2021.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CarbonDRFT/project-exam-2021-DanierValiev/issues"
+    "url": "https://github.com/CarbonDRFT/semesterProject-DanierValiev-2021/issues"
   },
-  "homepage": "https://github.com/CarbonDRFT/project-exam-2021-DanierValiev#readme",
+  "homepage": "https://github.com/CarbonDRFT/semesterProject-DanierValiev-2021#readme",
   "dependencies": {
     "aws-sdk": "^2.1046.0",
     "bcrypt": "^5.0.1",
