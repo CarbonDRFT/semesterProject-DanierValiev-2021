@@ -1,17 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+/* font-family: 'Roboto', sans-serif; */
+
 :root {
   --mainColor: #19204e;
   --secondColor: #fcb300;
   --greyColor: #d6d6d6;
   --redColor: #df1b3f;
-  --mainFont: "roboto", sans-serif;
+  --mainFont: "Roboto", sans-serif;
   --desktopH1: 50px;
-  --fontBold: 700;
   --fontMed: 500;
   --fontReg: 400;
   --fontlight: 200;
   --desktopH2: 37px;
   --desktoph3: 28px;
   --desktop-p: 16px;
+  --bold700: 700;
 }
 
 @media (min-width: 40rem) and (max-width: 75rem) {
@@ -64,19 +67,24 @@ span {
 
 p {
   font-size: var(--desktop-p);
+  font-family: var(--mainFont);
 }
 h1 {
   font-size: var(--desktopH1);
+  font-family: var(--mainFont);
+  font-weight: var(--bold700);
 }
 
 h2 {
   font-size: var(--desktopH2);
   font-weight: var(--fontMed);
+  font-family: var(--mainFont);
 }
 
 h3 {
   font-size: var(--desktoph3);
   font-weight: var(--fontReg);
+  font-family: var(--mainFont);
 }
 
 ::placeholder {

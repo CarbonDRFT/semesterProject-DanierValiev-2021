@@ -33,6 +33,14 @@
   border-radius: 1rem;
 }
 
+.header__text--subtitle {
+  font-weight: 400;
+}
+
+.header__text--description {
+  font-weight: 200;
+}
+
 .header__text--container {
   margin: 2rem;
 }
@@ -62,20 +70,6 @@
   color: white;
 }
 
-.header__video {
-  position: relative;
-  width: 100%;
-  height: 40rem;
-  margin: auto;
-  border: 1px solid #555;
-  box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
-  z-index: -1;
-}
-.header__video video {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 .header__video > .slider {
   position: absolute;
   top: 0;

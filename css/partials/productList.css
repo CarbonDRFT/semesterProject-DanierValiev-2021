@@ -52,12 +52,6 @@
   display: none;
 }
 
-.product__container {
-  width: 100%;
-  justify-content: start;
-  padding-left: 60px;
-}
-
 .product__category {
   padding: 0 60px;
 }

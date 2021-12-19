@@ -72,7 +72,7 @@ const createProductCards = (data, parent) => {
                   <div class="product__info" onclick="location.href = '/products/${
                     data[i].id
                   }'">
-                      <h2 class="product__brand">${data[i].name}</h2>
+                      <h3 class="product__brand">${data[i].name}</h3>
                       <p class="product__short--des">${data[i].shortDes}</p>
                       <span class="price">$${data[i].sellPrice}
                       ${

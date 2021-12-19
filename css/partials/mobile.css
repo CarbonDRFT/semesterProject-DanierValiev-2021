@@ -45,16 +45,43 @@
 
   /* BODY HEADER */
   .header__section {
-    margin-bottom: 30rem;
+    margin-bottom: 14rem;
+  }
+
+  /* PRODUCT PAGE */
+
+  .image__slider {
+    width: 80% !important;
+    min-width: 30rem;
+    height: 40rem !important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+  }
+
+  .product__details {
+    justify-content: center !important;
+    width: 90%;
+  }
+
+  .details {
+    width: 90% !important;
   }
 
   .header__info--container {
     right: 50%;
     transform: translateX(50%);
     margin: auto;
-    top: 40rem;
+    top: 25rem;
     display: block;
     width: clamp(35rem, 70%, 80rem);
+  }
+
+  .image__overlay {
+    height: 35rem;
+  }
+
+  .header__section > img {
+    height: 35rem;
   }
 
   .header__text--title {
