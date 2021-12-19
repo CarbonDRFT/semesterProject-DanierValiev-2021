@@ -573,7 +573,7 @@ button.swiper-pagination-bullet {
   top: 0;
   bottom: 0;
   right: 0;
-  filter: blur(50px);
+  filter: blur(5rem);
 }
 .swiper-flip {
   overflow: visible;

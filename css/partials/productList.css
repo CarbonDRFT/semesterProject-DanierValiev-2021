@@ -1,8 +1,9 @@
 .productlist__category {
-  position: relative;
-  height: 30rem;
+  position: fixed;
+  height: 15rem;
   width: 100%;
   background: #fff;
+  z-index: 100;
 }
 
 .productlist__category--container {
@@ -22,17 +23,28 @@
 .productlist__link > a {
   text-decoration: none;
   font-size: var(--desktop-p);
+  color: var(--mainColor);
+}
+
+.productlist__link > a:active {
+  color: var(--secondColor);
 }
 
 .productlist__container {
   width: 100%;
   margin: auto;
+  margin-top: 20rem;
+}
+
+.productList__title {
+  margin: auto;
+  text-align: center;
 }
 
 .men__product--section,
 .women__product--section,
 .kids__product--section {
-  padding: 50px 0;
+  padding: 5rem 0;
 }
 
 .female__product--section {
@@ -53,5 +65,5 @@
 }
 
 .product__category {
-  padding: 0 60px;
+  width: 80%;
 }

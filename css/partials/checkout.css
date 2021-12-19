@@ -6,14 +6,15 @@
 .heading {
   text-transform: capitalize;
   font-size: 500;
-  font-size: 30px;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  margin-bottom: 2rem;
 }
 
 .checkout__form {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  justify-content: center;
 }
 
 .checkout__form :is(#address, #street, #landmark) {

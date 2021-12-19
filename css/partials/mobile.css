@@ -2,7 +2,7 @@
   .primary-navigation {
     position: fixed;
     inset: 0 0 0 30%;
-    gap: 2em;
+    gap: 3em;
     z-index: 1000;
     flex-direction: column;
     padding: min(30vh, 10rem) 2rem;
@@ -19,7 +19,7 @@
 
   .mobile__nav--toggle {
     display: block;
-    position: absolute;
+    position: fixed;
     z-index: 9999;
     background-color: transparent;
     background: url("/img/hamburger-toggle.svg");
@@ -27,12 +27,18 @@
     border: 0;
     width: 2rem;
     aspect-ratio: 1;
-    top: 2rem;
-    right: 2rem;
+    top: 3rem;
+    right: 3rem;
   }
 
   .mobile__nav--toggle[aria-expanded="true"] {
     background-image: url("/img/times-solid.svg");
+  }
+
+  .login__icon,
+  .cart__icon {
+    width: 3rem;
+    height: 3rem;
   }
 
   .product__form {

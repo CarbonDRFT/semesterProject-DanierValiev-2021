@@ -1,5 +1,5 @@
 .hide__seller {
-  display: none;
+  display: none !important;
 }
 
 /* become seller element */
@@ -29,6 +29,12 @@
   text-transform: capitalize;
   font-size: 1.6rem;
   cursor: pointer;
+}
+
+.no__product--image {
+  display: flex;
+  margin: 3rem auto;
+  justify-content: center;
 }
 
 /* apply form */
@@ -101,9 +107,9 @@
 
 .product__card {
   flex: 0 0 auto;
-  width: 250px;
-  height: 450px;
-  margin-right: 40px;
+  width: 25rem;
+  height: 45rem;
+  margin-right: 4rem;
   z-index: 10;
 }
 
@@ -127,8 +133,8 @@
 
 .tag {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 1rem;
+  left: 1rem;
   padding: 2px 10px;
   border-radius: 2px;
   background: var(--secondColor);
@@ -142,10 +148,10 @@
 
 .card__action--btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 40px;
-  height: 40px;
+  top: 1rem;
+  right: 1rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   border: none;
   outline: none;
@@ -158,7 +164,7 @@
 }
 
 .card__action--btn img {
-  height: 18px;
+  height: 1.8rem;
 }
 
 .edit__btn:hover,
@@ -167,11 +173,11 @@
 }
 
 .open__btn {
-  top: 60px;
+  top: 6rem;
 }
 
 .delete__popup--btn {
-  top: 110px;
+  top: 11rem;
   background: #f25252;
 }
 
@@ -195,36 +201,36 @@
 }
 
 .alert {
-  width: 400px;
+  width: 40rem;
   height: auto;
-  border-radius: 10px;
+  border-radius: 1rem;
   background: #fff;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
   position: relative;
-  padding: 15px;
+  padding: 1.5rem;
 }
 
 .close__btn {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 1.5rem;
+  right: 1.5rem;
   background: none;
   border: none;
   cursor: pointer;
 }
 
 .close__btn img {
-  width: 15px;
+  width: 1.5rem;
 }
 
 .delete__svg {
-  height: 60px;
+  height: 6rem;
   display: block;
-  margin: 20px auto;
+  margin: 2rem auto;
 }
 
 .text {
-  color: #383838;
+  color: var(--secondColor);
   text-transform: capitalize;
   text-align: center;
 }
@@ -232,18 +238,18 @@
 .delete__btn {
   cursor: pointer;
   border: none;
-  border-radius: 5px;
-  background: #f25252;
-  margin: 15px auto 0;
+  border-radius: 0.5rem;
+  background: var(--redColor);
+  margin: 1.5rem auto 0;
   display: block;
-  padding: 10px 20px;
+  padding: 1rem 2rem;
   text-transform: capitalize;
   color: #fff;
   font-size: var(--desktop-p);
 }
 
 .actual__price {
-  margin-left: 20px;
+  margin-left: 2rem;
   opacity: 0.5;
   text-decoration: line-through;
 }
@@ -255,5 +261,5 @@
 }
 
 .product__info--sellerPage > h3 {
-  font-size: 20px;
+  font-size: 2rem;
 }

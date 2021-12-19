@@ -102,7 +102,7 @@
   align-items: center;
   background: #fff;
   background-size: cover;
-  border-radius: 10px;
+  border-radius: 1rem;
   grid-row: span 2;
   text-shadow: 0 0 10px #fff;
   width: 30rem;
@@ -112,26 +112,26 @@
 
 .text {
   text-transform: capitalize;
-  color: #383838;
-  font-size: 20px;
+  color: var(--mainColor);
+  font-size: 2rem;
   font-weight: 500;
 }
 
 .upload__image--sec,
 .select__sizes {
   background: #fff;
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 1rem;
+  padding: 2rem;
 }
 
 .text img {
-  height: 20px;
-  margin-right: 10px;
+  height: 2rem;
+  margin-right: 1rem;
 }
 
 .upload__catalouge {
   width: 100%;
-  margin: 20px 0;
+  margin: 2rem 0;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -162,18 +162,18 @@
 }
 
 .sizes {
-  margin-top: 30px;
+  margin-top: 3rem;
 }
 
 .size__checkbox {
   -webkit-appearance: none;
-  width: 100px;
-  height: 40px;
+  width: 10rem;
+  height: 4rem;
   border-radius: 5px;
   border: 1px solid var(--secondColor);
   cursor: pointer;
-  margin-bottom: 10px;
-  margin-right: 10px;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
   position: relative;
   color: var(--secondColor);
 }
@@ -184,7 +184,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 16px;
+  font-size: var(--desktop-p);
   text-transform: uppercase;
 }
 
@@ -227,21 +227,21 @@ input::-webkit-inner-spin-button {
 }
 
 .buttons {
-  margin: 20px 0 50px;
+  margin: 2rem 0 5rem;
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
 }
 
 .btn {
-  padding: 10px 30px;
+  padding: 1rem 3rem;
   text-transform: capitalize;
   color: #fff;
   background: var(--mainColor);
-  border-radius: 5px;
+  border-radius: 0.5rem;
   border: none;
   outline: none;
-  margin-right: 10px;
+  margin-right: 1rem;
   cursor: pointer;
   font-size: var(--desktop-p);
 }

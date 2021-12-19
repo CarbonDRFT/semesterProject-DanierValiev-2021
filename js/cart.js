@@ -4,7 +4,7 @@ const createSmallCards = (data) => {
     <div class="sm__product">
         <img src="${data.image}" class="sm__product--img" alt="">
         <div class="sm__text">
-            <p class="sm__product--name">${data.name}</p>
+            <h3 class="sm__product--name">${data.name}</h3>
             <p class="sm__des">${data.shortDes}</p>
         </div>
         <div class="item__counter">
@@ -26,7 +26,7 @@ const setProducts = (name) => {
   const element = document.querySelector(`.${name}`);
   let data = JSON.parse(localStorage.getItem(name));
   if (data == null) {
-    element.innerHTML = `<img src="img/empty-cart.png" class="empty__img" alt="">`;
+    element.innerHTML = `<img src="../img/empty-cart.png" class="empty__img" alt="empty">`;
   } else {
     for (let i = 0; i < data.length; i++) {
       element.innerHTML += createSmallCards(data[i]);

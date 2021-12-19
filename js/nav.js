@@ -76,9 +76,9 @@ navbar = document.getElementById("navbar");
 window.addEventListener("scroll", () => {
   let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
   if (scrollLeft > lastScrollTop) {
-    navbar.style.Left = "100px";
+    navbar.style.Left = "10rem";
   } else {
-    navbar.style.Left = "-100px";
+    navbar.style.Left = "-10rem";
   }
   lastScrollTop = scrollLeft;
 });
@@ -97,7 +97,7 @@ window.onload = () => {
   let user = JSON.parse(sessionStorage.user || null);
   if (user != null) {
     // means user is logged in
-    popupText.innerHTML = `logged in as, ${user.name}`;
+    popupText.innerHTML = `logged in as, Admin`;
     actionBtn.innerHTML = "log out";
     actionBtn.addEventListener("click", () => {
       sessionStorage.clear();

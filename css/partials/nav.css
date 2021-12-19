@@ -18,6 +18,7 @@
 
 .logo {
   width: 18rem;
+  cursor: pointer;
 }
 
 .logo__container {
