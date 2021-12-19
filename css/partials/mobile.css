@@ -73,6 +73,12 @@
   .header__text__button--container {
     justify-content: center;
   }
+
+  /* SLIDER FRONT PAGE */
+
+  .slider-title {
+    font-size: var(--mobileH3);
+  }
 }
 
 @media (min-width: 40em) {

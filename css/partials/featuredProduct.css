@@ -7,7 +7,7 @@
 
 .slider-title {
   text-transform: capitalize;
-  font-size: 2vw;
+  font-size: var(--desktoph3);
   margin: 30px 10vw;
 }
 
