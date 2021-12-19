@@ -30,6 +30,8 @@
   border-radius: 0.5rem;
   border: 1px solid #d8d8d8;
   margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .sm__product {

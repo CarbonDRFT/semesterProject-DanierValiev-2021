@@ -1,4 +1,4 @@
-@media (min-width: 35em) and (max-width: 55em) {
+@media (min-width: 40rem) and (max-width: 70rem) {
   .primary-navigation a > span[area-hidden] {
     display: none;
   }
@@ -32,6 +32,36 @@
 
   .header__text__button--container {
     justify-content: center;
+  }
+
+  /* CHECKOUT */
+
+  .product__list {
+    width: 90%;
+    margin: auto;
+  }
+  .sm__product {
+    flex-wrap: wrap;
+    height: 30rem;
+    justify-content: center;
+  }
+
+  .sm__product--img {
+    text-align: center;
+  }
+
+  .sm__text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .item__counter {
+    text-align: center;
+  }
+
+  .sm__price {
+    font-size: 3rem;
+    text-align: center;
   }
 }
 

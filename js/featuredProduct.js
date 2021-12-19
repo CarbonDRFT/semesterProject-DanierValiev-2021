@@ -35,7 +35,9 @@ const createfeauredcard = (card) => {
                 ? `<span class="tag">${card.discount}% Off</span>`
                 : ""
             }        
-            <img src="${card.images[0]}" class="product__thumb" alt="">
+            <img src="${
+              card.images[0]
+            }" class="product__thumb" alt="product image">
         </div>
         <div class="product__info product__info--sellerPage"'>
             <h3 class="product__brand">${card.name.slice(0, 18) + "..."}</h3>

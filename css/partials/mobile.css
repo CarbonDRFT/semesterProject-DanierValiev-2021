@@ -112,6 +112,45 @@
   .slider-title {
     font-size: var(--mobileH3);
   }
+
+  /* CHECKOUT */
+
+  .product__list {
+    width: 90%;
+    margin: auto;
+    min-width: 0;
+  }
+  .sm__product {
+    flex-wrap: wrap;
+    height: 30rem;
+    justify-content: center;
+  }
+
+  .sm__product--img {
+    text-align: center;
+  }
+
+  .sm__text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .item__counter {
+    text-align: center;
+  }
+
+  .sm__price {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .cart__section {
+    justify-content: center;
+  }
+
+  .login__logout--popup {
+    right: inherit;
+  }
 }
 
 @media (min-width: 40em) {

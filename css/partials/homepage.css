@@ -35,6 +35,7 @@
 
 .header__text--subtitle {
   font-weight: 400;
+  margin: 2rem 0;
 }
 
 .header__text--description {

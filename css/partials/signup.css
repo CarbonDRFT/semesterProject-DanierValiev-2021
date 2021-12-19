@@ -94,12 +94,13 @@ textarea {
 }
 
 label {
-  font-size: 1rem;
+  font-size: var(--desktop-p);
   display: inline-block;
 }
 
 label a {
   color: var(--mainColor);
+  font-size: var(--desktop-p);
 }
 
 .link {

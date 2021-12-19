@@ -10,12 +10,16 @@ const createProduct = (data) => {
     data.id
   }'">
             <button class="card__action--btn edit__btn" onclick="location.href = 
-            '/add-product/${data.id}'"><img src="img/edit.png" alt=""></button>
+            '/add-product/${
+              data.id
+            }'"><img src="img/edit.png" alt="edit image"></button>
             <button class="card__action--btn open__btn" onclick="location.href = 
-            '/products/${data.id}'"><img src="img/open.png" alt=""></button>
+            '/products/${
+              data.id
+            }'"><img src="img/open.png" alt="open image"></button>
             <button class="card__action--btn delete__popup--btn" onclick="openDeletePopup('${
               data.id
-            }')"><img src="img/delete.png" alt=""></button>
+            }')"><img src="img/delete.png" alt="delete product"></button>
         </div>
         <div class="product__info product__info--sellerPage">
             <h3 class="product__brand">${data.name}</h3>

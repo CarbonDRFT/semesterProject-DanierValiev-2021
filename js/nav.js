@@ -105,7 +105,7 @@ window.onload = () => {
     });
   } else {
     // user is logged out
-    popupText.innerHTML = "log in to place order";
+    popupText.innerHTML = "Log in";
     actionBtn.innerHTML = "Log in";
     actionBtn.addEventListener("click", () => {
       location.href = "/login";

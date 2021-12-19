@@ -24,6 +24,8 @@
   text-decoration: none;
   font-size: var(--desktop-p);
   color: var(--mainColor);
+  font-family: var(--mainFont);
+  font-weight: 500;
 }
 
 .productlist__link > a:active {

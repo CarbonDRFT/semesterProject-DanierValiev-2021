@@ -4,6 +4,8 @@
   text-decoration: none;
   font-size: var(--desktop-p);
   color: var(--secondColor);
+  font-family: var(--mainFont);
+  font-weight: 500;
 }
 
 .primary-navigation a > [area-hidden="true"] {
@@ -95,7 +97,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  background: hsl(0 0% 100% / 0.5);
+  background: hsl(0 0% 100% / 0.8);
 }
 
 .login__logout--popup {
@@ -114,7 +116,6 @@
   position: absolute;
   width: 1.5rem;
   height: 1.5rem;
-  background: #fff;
   border-radius: 0.5rem;
 }
 
