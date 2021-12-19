@@ -14,7 +14,7 @@
   --desktop-p: 16px;
 }
 
-@media (min-width: 35rem) and (max-width: 75rem) {
+@media (min-width: 40rem) and (max-width: 75rem) {
   :root {
     --mobileH1: 40px;
     --mobileH2: 30px;
@@ -23,7 +23,7 @@
   }
 }
 
-@media (max-width: 35rem) {
+@media (max-width: 40rem) {
   :root {
     --mobileH1: 32px;
     --mobileH2: 26px;
