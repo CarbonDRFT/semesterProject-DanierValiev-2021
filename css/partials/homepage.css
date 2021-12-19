@@ -350,35 +350,3 @@
   grid-column: span 2;
   margin-bottom: 10px;
 }
-
-@media (max-width: 35rem) {
-  .header__section {
-    margin-bottom: 30rem;
-  }
-
-  .header__info--container {
-    right: 50%;
-    transform: translateX(50%);
-    margin: auto;
-    top: 40rem;
-    display: block;
-    width: clamp(35rem, 70%, 80rem);
-  }
-
-  .header__text--title {
-    font-size: var(--mobileH1);
-  }
-
-  .header__text--subtitle {
-    font-size: var(--mobileH2);
-    margin: 2rem auto;
-  }
-
-  .header__text--description {
-    font-size: var(--mobileH3);
-  }
-
-  .header__text__button--container {
-    justify-content: center;
-  }
-}
