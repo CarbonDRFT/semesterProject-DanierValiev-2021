@@ -11,4 +11,5 @@
 
 .error__404--msg a {
   color: var(--mainColor);
+  font-size: var(--desktop-p);
 }
