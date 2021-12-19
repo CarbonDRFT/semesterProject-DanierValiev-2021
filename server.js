@@ -73,6 +73,7 @@ app.get("/signup", (req, res) => {
   res.sendFile(path.join(staticPath, "signup.html"));
 });
 
+// BannerImg
 app.get("/bannerImage", (req, res) => {
   db.collection("bannerimage")
     .doc("bannerimage")
@@ -405,7 +406,7 @@ app.use((req, res) => {
   res.redirect("/404");
 });
 
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 3000 || 5500;
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
